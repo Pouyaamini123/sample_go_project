@@ -22,14 +22,24 @@ type: "POST",
 dir:"rtl",
 data: $(this).serialize(), 
 success: function(response){
-$("#message").text("اطلاعات با موفقیت ثبت شد").css("color", "green");
+
+$("#message").text(response).css("color", "green");
+
 $("form")[0].reset();
+
 setTimeout(function(){
 $("#message").text("");
 }, 2000);
 },
+
 error: function(xhr, status, error){
-$("#message").text("خطا در ثبت اطلاعات").css("color", "red");
+if(xhr.status==400){
+$("#message").text("نام یا زمان انتخاب نشده است").css("color", "red");
+}else if(xhr.status==422){
+$("#message").text("تداخلی بین داده ی وارد شده و داده های قبلی دارد").css("color", "red");
+}
+
+$("form")[0].reset();
 setTimeout(function(){
 $("#message").text(""); 
 }, 2000);
@@ -57,6 +67,62 @@ $("#message").text("");
 &nbsp;&nbsp;<label for="d4" style="font-size: 30px;">سه شنبه</label><br>
 &nbsp;&nbsp;<input style="width:17px; height:17px;" type="checkbox" id="d5" name="day" value="چهارشنبه">
 &nbsp;&nbsp;<label for="d5" style="font-size: 30px;">چهارشنبه</label><br><br>
+&nbsp;&nbsp;<label for="starttime"style="font-size: 20px;">ساعت شروع</label>
+<select name="starttime" id="starttime"style="font-size: 20px;">
+<option value="1">8</option>
+<option value="2">8:30</option>
+<option value="3">9</option>
+<option value="4">9:30</option>
+<option value="5">10</option>
+<option value="6">10:30</option>
+<option value="7">11</option>
+<option value="8">11:30</option>
+<option value="9">12</option>
+<option value="10">12:30</option>
+<option value="11">13</option>
+<option value="12">13:30</option>
+<option value="13">14</option>
+<option value="14">14:30</option>
+<option value="15">15</option>
+<option value="16">15:30</option>
+<option value="17">16</option>
+<option value="18">16:30</option>
+<option value="19">17</option>
+<option value="20">17:30</option>
+<option value="21">18</option>
+<option value="22">18:30</option>
+<option value="23">19</option>
+<option value="24">19:30</option>
+</select>
+&nbsp;&nbsp;&nbsp;<label for="endtime"style="font-size: 20px;">ساعت پایان</label>
+<select name="endtime" id="endtime"style="font-size: 20px;">
+<option value="1">8</option>
+<option value="2">8:30</option>
+<option value="3">9</option>
+<option value="4">9:30</option>
+<option value="5">10</option>
+<option value="6">10:30</option>
+<option value="7">11</option>
+<option value="8">11:30</option>
+<option value="9">12</option>
+<option value="10">12:30</option>
+<option value="11">13</option>
+<option value="12">13:30</option>
+<option value="13">14</option>
+<option value="14">14:30</option>
+<option value="15">15</option>
+<option value="16">15:30</option>
+<option value="17">16</option>
+<option value="18">16:30</option>
+<option value="19">17</option>
+<option value="20">17:30</option>
+<option value="21">18</option>
+<option value="22">18:30</option>
+<option value="23">19</option>
+<option value="24">19:30</option>
+</select><br><br><br>
+
+
 &nbsp;&nbsp;<input type="submit" style="background-color:black; color:white; font-size: 30px;" value="ثبت درس">
 </form>
 <div id="message" class="message"></div>

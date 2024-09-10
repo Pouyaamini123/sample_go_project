@@ -7,8 +7,10 @@ import (
 )
 
 type data struct {
-	Days []string
-	Name string
+	Days      []string
+	Name      string
+	Starttime string
+	Endtime   string
 }
 
 var datas = []data{}
@@ -31,7 +33,14 @@ func (h *StartPage) StartPage_POST(c *gin.Context) {
 
 	dname := c.PostForm("dname")
 	days := c.PostFormArray("day")
-	response := data{Name: dname, Days: days}
-	datas = append(datas, response)
-	c.JSON(http.StatusOK, datas)
+	dtimes := c.PostForm("starttime")
+	dtimee := c.PostForm("endtime")
+	if dname == "" || len(days) == 0 {
+		c.JSON(400, "")
+	} else {
+		response := data{Name: dname, Days: days, Starttime: dtimes ,Endtime: dtimee}
+		datas = append(datas, response)
+		c.JSON(http.StatusOK, "درس با موفقیت اضافه شد")
+
+	}
 }
