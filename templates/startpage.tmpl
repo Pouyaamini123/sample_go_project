@@ -27,7 +27,7 @@ $("form")[0].reset();
 setTimeout(function(){
 $("#message").text("");
 location.reload();
-}, 2000);
+}, 1500);
 
 },
 
@@ -37,6 +37,8 @@ if(xhr.status==400){
 $("#message").text("نام یا زمان انتخاب نشده است").css("color", "red");
 }else if(xhr.status==422){
 $("#message").text("تداخلی بین داده ی وارد شده و داده های قبلی دارد").css("color", "red");
+}else if(xhr.status==432){
+$("#message").text("ساعت شروع و پایان به درستی وارد نشده است").css("color", "red");
 }
 
 $("form")[0].reset();
@@ -156,187 +158,187 @@ background-color: #f2f2f2;
 <tbody>
 <tr>
 <td>8:00 - 8:30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time1}}</td>
+<td>{{.datem.D2.Time1}}</td>
+<td>{{.datem.D3.Time1}}</td>
+<td>{{.datem.D4.Time1}}</td>
+<td>{{.datem.D5.Time1}}</td>
 </tr>
 <tr>
 <td>8:30 - 9:00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time2}}</td>
+<td>{{.datem.D2.Time2}}</td>
+<td>{{.datem.D3.Time2}}</td>
+<td>{{.datem.D4.Time2}}</td>
+<td>{{.datem.D5.Time2}}</td>
 </tr>
 <tr>
 <td>9:00 - 9:30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time3}}</td>
+<td>{{.datem.D2.Time3}}</td>
+<td>{{.datem.D3.Time3}}</td>
+<td>{{.datem.D4.Time3}}</td>
+<td>{{.datem.D5.Time3}}</td>
 </tr>
 <tr>
 <td>9:30 - 10:00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time4}}</td>
+<td>{{.datem.D2.Time4}}</td>
+<td>{{.datem.D3.Time4}}</td>
+<td>{{.datem.D4.Time4}}</td>
+<td>{{.datem.D5.Time4}}</td>
 </tr>
 <tr>
 <td>10:00 - 10:30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time5}}</td>
+<td>{{.datem.D2.Time5}}</td>
+<td>{{.datem.D3.Time5}}</td>
+<td>{{.datem.D4.Time5}}</td>
+<td>{{.datem.D5.Time5}}</td>
 </tr>
 <tr>
 <td>10:30 - 11:00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time6}}</td>
+<td>{{.datem.D2.Time6}}</td>
+<td>{{.datem.D3.Time6}}</td>
+<td>{{.datem.D4.Time6}}</td>
+<td>{{.datem.D5.Time6}}</td>
 </tr>
 <tr>
 <td>11:00 - 11:30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time7}}</td>
+<td>{{.datem.D2.Time7}}</td>
+<td>{{.datem.D3.Time7}}</td>
+<td>{{.datem.D4.Time7}}</td>
+<td>{{.datem.D5.Time7}}</td>
 </tr>
 <tr>
 <td>11:30 - 12:00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time8}}</td>
+<td>{{.datem.D2.Time8}}</td>
+<td>{{.datem.D3.Time8}}</td>
+<td>{{.datem.D4.Time8}}</td>
+<td>{{.datem.D5.Time8}}</td>
 </tr>
 <tr>
 <td>12:00 - 12:30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time9}}</td>
+<td>{{.datem.D2.Time9}}</td>
+<td>{{.datem.D3.Time9}}</td>
+<td>{{.datem.D4.Time9}}</td>
+<td>{{.datem.D5.Time9}}</td>
 </tr>
 <tr>
 <td>12:30 - 13:00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time10}}</td>
+<td>{{.datem.D2.Time10}}</td>
+<td>{{.datem.D3.Time10}}</td>
+<td>{{.datem.D4.Time10}}</td>
+<td>{{.datem.D5.Time10}}</td>
 </tr>
 <tr>
 <td>13:00 - 13:30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time11}}</td>
+<td>{{.datem.D2.Time11}}</td>
+<td>{{.datem.D3.Time11}}</td>
+<td>{{.datem.D4.Time11}}</td>
+<td>{{.datem.D5.Time11}}</td>
 </tr>
 <tr>
 <td>13:30 - 14:00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time12}}</td>
+<td>{{.datem.D2.Time12}}</td>
+<td>{{.datem.D3.Time12}}</td>
+<td>{{.datem.D4.Time12}}</td>
+<td>{{.datem.D5.Time12}}</td>
 </tr>
 <tr>
 <td>14:00 - 14:30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time13}}</td>
+<td>{{.datem.D2.Time13}}</td>
+<td>{{.datem.D3.Time13}}</td>
+<td>{{.datem.D4.Time13}}</td>
+<td>{{.datem.D5.Time13}}</td>
 </tr>
 <tr>
 <td>14:30 - 15:00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time14}}</td>
+<td>{{.datem.D2.Time14}}</td>
+<td>{{.datem.D3.Time14}}</td>
+<td>{{.datem.D4.Time14}}</td>
+<td>{{.datem.D5.Time14}}</td>
 </tr>
 <tr>
 <td>15:00 - 15:30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time15}}</td>
+<td>{{.datem.D2.Time15}}</td>
+<td>{{.datem.D3.Time15}}</td>
+<td>{{.datem.D4.Time15}}</td>
+<td>{{.datem.D5.Time15}}</td>
 </tr>
 <tr>
 <td>15:30 - 16:00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time16}}</td>
+<td>{{.datem.D2.Time16}}</td>
+<td>{{.datem.D3.Time16}}</td>
+<td>{{.datem.D4.Time16}}</td>
+<td>{{.datem.D5.Time16}}</td>
 </tr>
 <tr>
 <td>16:00 - 16:30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time17}}</td>
+<td>{{.datem.D2.Time17}}</td>
+<td>{{.datem.D3.Time17}}</td>
+<td>{{.datem.D4.Time17}}</td>
+<td>{{.datem.D5.Time17}}</td>
 </tr>
 <tr>
 <td>16:30 - 17:00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time18}}</td>
+<td>{{.datem.D2.Time18}}</td>
+<td>{{.datem.D3.Time18}}</td>
+<td>{{.datem.D4.Time18}}</td>
+<td>{{.datem.D5.Time18}}</td>
 </tr>
 <tr>
 <td>17:00 - 17:30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time19}}</td>
+<td>{{.datem.D2.Time19}}</td>
+<td>{{.datem.D3.Time19}}</td>
+<td>{{.datem.D4.Time19}}</td>
+<td>{{.datem.D5.Time19}}</td>
 </tr>
 <tr>
 <td>17:30 - 18:00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time20}}</td>
+<td>{{.datem.D2.Time20}}</td>
+<td>{{.datem.D3.Time20}}</td>
+<td>{{.datem.D4.Time20}}</td>
+<td>{{.datem.D5.Time20}}</td>
 </tr>
 <tr>
 <td>18:00 - 18:30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time21}}</td>
+<td>{{.datem.D2.Time21}}</td>
+<td>{{.datem.D3.Time21}}</td>
+<td>{{.datem.D4.Time21}}</td>
+<td>{{.datem.D5.Time21}}</td>
 </tr>
 <tr>
 <td>18:30 - 19:00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time22}}</td>
+<td>{{.datem.D2.Time22}}</td>
+<td>{{.datem.D3.Time22}}</td>
+<td>{{.datem.D4.Time22}}</td>
+<td>{{.datem.D5.Time22}}</td>
 </tr>
 <tr>
 <td>19:00 - 19:30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{.datem.D1.Time23}}</td>
+<td>{{.datem.D2.Time23}}</td>
+<td>{{.datem.D3.Time23}}</td>
+<td>{{.datem.D4.Time23}}</td>
+<td>{{.datem.D5.Time23}}</td>
 </tr>
 </tbody>
 </table>
