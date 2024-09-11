@@ -11,12 +11,12 @@ func InitServer() {
 	r.Use(gin.Logger(), gin.Recovery())
 	r.LoadHTMLGlob("templates/*")
 
-	v1 := r.Group("/mainpage")
+	v1 := r.Group("https://pouyaamini123.github.io/sample_go_project//mainpage")
 	{
 		routers.Rutermainpage(v1)
 	}
 
-	v2 := r.Group("/startpage")
+	v2 := r.Group("https://pouyaamini123.github.io/sample_go_project//startpage")
 	{
 		routers.Ruterstartpage(v2)
 	}
